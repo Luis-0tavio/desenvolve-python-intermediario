@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Escrever Post</h1>
+    {% if erro %}
+        <div style="background-color: #f8d7da; color: #721c24; padding: 15px; border-radius: 4px; margin-bottom: 20px; border: 1px solid #f5c6cb;">
+            {{ erro }}
+        </div>
+    {% endif %}
+    <form method="post">
+        <div class="form-group">
+            <label for="body">Seu Post:</label>
+            <textarea id="body" name="body" required placeholder="O que está em sua mente?" autofocus></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Publicar</button>
+        </div>
+    </form>
+{% endblock %}
